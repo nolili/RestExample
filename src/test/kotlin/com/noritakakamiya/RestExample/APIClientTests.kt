@@ -1,6 +1,6 @@
 package com.noritakakamiya.RestExample
 
-import com.noritakakamiya.RestExample.Infrastructure.DogAPIClient
+import com.noritakakamiya.RestExample.Infrastructure.QuoteAPIClient
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
 import org.springframework.beans.factory.annotation.Autowired
@@ -25,8 +25,8 @@ class APIClientTests {
                 MediaType.APPLICATION_JSON_UTF8
             )
         )
-        val client = DogAPIClient(restTemplate)
-        val result = client.getDog()
+        val client = QuoteAPIClient(restTemplate)
+        val result = client.getQuote()
 
         assertEquals(12, result.value.id)
 
