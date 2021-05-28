@@ -9,7 +9,7 @@ interface APIService {
 }
 
 @Service
-class DogAPIService(private val apiClient: APIClient) : APIService {
+class QuoteAPIService(private val apiClient: APIClient) : APIService {
     override fun fetch(): Quote {
         return apiClient.getQuote()
     }
